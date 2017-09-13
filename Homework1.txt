@@ -8,8 +8,6 @@ Chapter 1
 Give examples of systems in which it may make sense to use traditional file processing instead of a database approach.
     Any system that needs a very little amount of data.  An example of this a graphing calculator, or a programmable keyboard.
 
-
-
     a. 'Course_number', 'Department', and 'Prerequisite_number' columns
     b. Yes, first remove the 'Department' column, since the Department is built into the 'Course_number'.  Then,
     concatenate the 'Prerequisite_number' onto the end of the 'Course_number', and then there is only one column that needs to be modified with the Department name change.
@@ -37,18 +35,29 @@ Discuss the different types of user-friendly interfaces and the types of users w
 
     "Natural Language Interfaces"
         A set of natural language commands that are interpreted into query commands.
-
-
         Example: Google search
 
-
     "Speech Input and Output"
+        Audio input as a means to build a database query.  The query is build via
+        a library of "predefined" words.
+        Example: Amazon Alexa or inquiry in a telephone directory
+
     "Interfaces for Parametric Users"
+        Short commands that are used to build queries, so that query entry is much faster.
+        Similar to aliases in Bash, or other scripting languages.
+        Example: Bank tellers can increase deposit or withdraw from a database with a few pre-programmed key strokes
+
     "Interfaces for DBA"
+        Privileged commands that only the database administrator can run.
 
 If you were designing a Web-based system to make airline reservations and sell airline tickets, which DBMS architecture would you choose from Section 2.5?
 Why? Why would the other architectures not be a good choice?
 
+    Three-tier or n-tier architecture would be best.  Having an intermediary layer between the database
+    and the client web interface, increases security and allows for business related logic to occur.  Events such as
+    payment or special reward programs can be computed on the intermediary layer.  We still want to use a database,
+    and thus simple client/server architecture would not qualify.  For the 2 tier approach, attaching the business logic to the clientside,
+    would leave room for security holes and inefficiency.
 
 Chapter 3
 
@@ -68,11 +77,16 @@ Consider the relation CLASS(Course#, Univ_Section#, Instructor_name, Semester, B
 This represents classes taught in a university, with unique Univ_section#s.
 Identify what you think should be various candidate keys,
 and write in your own words the conditions or assumptions under which each candidate key would be valid.
-    I would assign the Univ_Section#, to be candidate keys.
+    We would assign the Univ_Section# and Course# to be candidate keys.  Our reasoning is as follows:
+    The Univ_Section# refers to a single tuple in the CLASS relation, in other words, no two tuples in the relation share the same Univ_Section#.
+    Similarly, the Course#, would likely only refer to a minimal amount of tuples in the relation.
 
 
 Recent changes in privacy laws have disallowed organizations from using Social Security numbers to identify individuals unless certain restrictions are satisfied.
 As a result, most U.S. universities cannot use SSNs as primary keys [except for financial data].
 In practice, Sutend_id, a unique identifier assigned to every student,
 is likely to be used as the primary key rather than SSN since Student_id can be used throughout the system.
-c. What are the advantages and disadvantages of using generated [surrogate] keys?
+C. What are the advantages and disadvantages of using generated [surrogate] keys?
+
+    A disadvantage is that adding the Student_id attribute will now require the database to store more data, whereas before all that was needed as the SSN as the primary key.
+    An advantage is that privacy would be heightened using the Student_id as a primary key.  Student information would not have to be queried using social security numbers; which is a very sensitive piece of data.
