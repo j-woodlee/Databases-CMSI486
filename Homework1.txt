@@ -48,4 +48,31 @@ Discuss the different types of user-friendly interfaces and the types of users w
 
 If you were designing a Web-based system to make airline reservations and sell airline tickets, which DBMS architecture would you choose from Section 2.5?
 Why? Why would the other architectures not be a good choice?
-    
+
+
+Chapter 3
+
+Why are tuples in a relation not ordered?
+    In Math, sets are unordered, and since a relation is a set of tuples, there is no order in a relation.
+    Furthermore, "tuple ordering is not part of relation definition because a relation attempts to represent facts at a logical or abstract level." (Elmasri 64)
+
+Why do we designate one of the candidate keys of a relation to be the primary key?
+    The primary key is used to identify a tuple (often represented as a row in a table) in a relation (often represented as a table).  The primary key is
+    usually selected by choosing the candidate key with a single or the least amount of attributes.
+
+Define foreign key.  What is this concept used for?
+    A foreign key is a value in a tuple that references a primary key of another relation.  It is used to create
+    referential integrity, so that consistency among tuples holding the same values can be established.
+
+Consider the relation CLASS(Course#, Univ_Section#, Instructor_name, Semester, Building_code, Room#, Time_period, Weekdays, Credit_hours).
+This represents classes taught in a university, with unique Univ_section#s.
+Identify what you think should be various candidate keys,
+and write in your own words the conditions or assumptions under which each candidate key would be valid.
+    I would assign the Univ_Section#, to be candidate keys.
+
+
+Recent changes in privacy laws have disallowed organizations from using Social Security numbers to identify individuals unless certain restrictions are satisfied.
+As a result, most U.S. universities cannot use SSNs as primary keys [except for financial data].
+In practice, Sutend_id, a unique identifier assigned to every student,
+is likely to be used as the primary key rather than SSN since Student_id can be used throughout the system.
+c. What are the advantages and disadvantages of using generated [surrogate] keys?
