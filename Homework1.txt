@@ -3,7 +3,49 @@ George Sarantinos
 
 Databases Homework Assignment Number One
 
+Chapter 1
+
 Give examples of systems in which it may make sense to use traditional file processing instead of a database approach.
-    Any System
+    Any system that needs a very little amount of data.  An example of this a graphing calculator, or a programmable keyboard.
+
+
+
+    a. 'Course_number', 'Department', and 'Prerequisite_number' columns
+    b. Yes, first remove the 'Department' column, since the Department is built into the 'Course_number'.  Then,
+    concatenate the 'Prerequisite_number' onto the end of the 'Course_number', and then there is only one column that needs to be modified with the Department name change.
+
+Chapter 2
+
+What is the difference between a database schema and a database state?
+    A database schema is not intended to change frequently because it is the overall conceptual design of the database.
+    Conversely, a database state is the actual data stored in the database at a particular point in time, which is continually accessed and modified.
+
+Discuss the different types of user-friendly interfaces and the types of users who typically use each.
+    "Menu-Based Interfaces for Web Clients or Browsing"
+        This allows users to formulate requests via a menu in a systematic, step based process.
+        No query language knowledge is required, types of users include: any user requesting information
+        from a database on the web.  Example: accessing insurance data online.
+
+    "Forms-Based Interfaces"
+        Naive users can fill out forms that allow for easy interaction with the database.  These forms can be created
+        using special form-based languages.
+        Example: Creating new social media entry or account.
+
+    "Graphical User Interfaces"
+        Typically, this is embodied in a diagram which a user can then manipulate in order to construct their query.
+        Example, uploading photo and modifying database by dragging it into a box.
+
+    "Natural Language Interfaces"
+        A set of natural language commands that are interpreted into query commands.
+
+
+        Example: Google search
+
+
+    "Speech Input and Output"
+    "Interfaces for Parametric Users"
+    "Interfaces for DBA"
+
+If you were designing a Web-based system to make airline reservations and sell airline tickets, which DBMS architecture would you choose from Section 2.5?
+Why? Why would the other architectures not be a good choice?
     
-    'Course_number' and 'Department' columns
