@@ -1,0 +1,9 @@
+Jake Woodlee
+George Sarantinos
+
+Databases Homework Assignment Number One
+
+Give examples of systems in which it may make sense to use traditional file processing instead of a database approach.
+    Any System
+    
+    'Course_number' and 'Department' columns
