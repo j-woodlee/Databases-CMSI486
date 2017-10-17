@@ -1,8 +1,8 @@
 1.1 – Project description, database engine used, potential users, maybe some other stuff.
 
     This database is intended to provide information on guns and gun owners.  With this
-    database, a user can find information as general as companies, to information as specific
-    as the serial numbers.  The database also provides a way to link specific guns
+    database, a user can find information as general as gun companies, to information as specific
+    as the gun serial numbers.  The database also provides a way to link specific guns
     to their owners.  Therefore, this database can be used for more than a single purpose.
 
     Database Engine: Postgres
@@ -28,6 +28,8 @@
 
 1.4 – A preliminary idea of the schema of the database including table descriptions and potential columns.
 
+
+
 1.5 – A complete preliminary Entity-Relationship Diagram [ERD] for the database [NOT hand-drawn, PLEASE!].
 
-    This is provided on the erdplus-diagram.png file.
+    (This is provided in the erdplus-diagram.png file)
