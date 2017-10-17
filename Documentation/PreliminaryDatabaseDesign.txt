@@ -28,8 +28,8 @@
 
 1.4 – A preliminary idea of the schema of the database including table descriptions and potential columns.
 
-
+    (This is provided on the schema.png file)
 
 1.5 – A complete preliminary Entity-Relationship Diagram [ERD] for the database [NOT hand-drawn, PLEASE!].
 
-    (This is provided in the erdplus-diagram.png file)
+    (This is provided on the erdplus-diagram.png file)
