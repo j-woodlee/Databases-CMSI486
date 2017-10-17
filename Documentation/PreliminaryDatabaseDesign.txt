@@ -1,8 +1,8 @@
 1.1 – Project description, database engine used, potential users, maybe some other stuff.
 
-    This is a database is intended to provide information on guns and gun owners.  With this
-    database, a user can find information as general as gun companies, to information as specific
-    as the serial number of a specific gun.  The database also provides a way to link specific guns
+    This database is intended to provide information on guns and gun owners.  With this
+    database, a user can find information as general as companies, to information as specific
+    as the serial numbers.  The database also provides a way to link specific guns
     to their owners.  Therefore, this database can be used for more than a single purpose.
 
     Database Engine: Postgres
