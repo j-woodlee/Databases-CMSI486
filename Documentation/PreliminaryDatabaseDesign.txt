@@ -1,10 +1,23 @@
-1.1 – Project description, database engine used, potential users, maybe some other stuff
-    This is a database on guns (idk what else to include).
-    Engine: Postgres
+1.1 – Project description, database engine used, potential users, maybe some other stuff.
+
+    This is a database is intended to provide information on guns and gun owners.  With this
+    database, a user can find information as general as gun companies, to information as specific
+    as the serial number of a specific gun.  The database also provides a way to link specific guns
+    to their owners.  Therefore, this database can be used for more than a single purpose.
+
+    Database Engine: Postgres
+
     Potential Users: Police, Gun Enthusiasts, Military
-1.2 – Data description, generally what type of data will be stored
+
+1.2 – Data description, generally what type of data will be stored.
+
     Basic information in regard to firearm ownership will be stored.
     Information includes model, serial number, company, owner, store, caliber, etc.
+
 1.3 – At least five examples of the type of data your database will provide to the user
+
 1.4 – A preliminary idea of the schema of the database including table descriptions and potential columns
+
 1.5 – A complete preliminary Entity-Relationship Diagram [ERD] for the database [NOT hand-drawn, PLEASE!]
+
+    This is provided on the erdplus-diagram.png file.
