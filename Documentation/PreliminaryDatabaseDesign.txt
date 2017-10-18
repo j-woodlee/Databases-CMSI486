@@ -24,13 +24,13 @@
 
     2. SELECT Serial_Number
        FROM Gun
-       WHERE Owner ID = 102
+       WHERE Owner_ID = 102
 
        Provides user with the serial numbers of the guns that a particular person has.
 
     3. SELECT *
        FROM Owner
-       WHERE Owner ID = 102
+       WHERE Owner_ID = 102
 
        Provides user with the user that is associated with the owner id.
 
