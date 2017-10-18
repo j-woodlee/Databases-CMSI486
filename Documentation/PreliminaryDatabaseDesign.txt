@@ -22,7 +22,7 @@
 
        Provides user with all of the gun companies from Germany
 
-    2. SELECT Serial Number
+    2. SELECT Serial_Number
        FROM Gun
        WHERE Owner ID = 102
 
@@ -34,17 +34,17 @@
 
        Provides user with the user that is associated with the owner id.
 
-    4. SELECT Model Name
+    4. SELECT Model_Name
        FROM Model
        WHERE Type = Rifle
 
        Provides user with the model names of guns that are rifles.
 
-    5. SELECT Store ID
+    5. SELECT Store_ID
        FROM Store
-       WHERE Name = Bobby's Big Guns
+       WHERE Name = "Bobby's Big Guns"
 
-       Provides user with the Store IDs of all the gun stores named Bobby's Big Guns. 
+       Provides user with the Store IDs of all the gun stores named Bobby's Big Guns.
 
 1.4 – A preliminary idea of the schema of the database including table descriptions and potential columns.
 
