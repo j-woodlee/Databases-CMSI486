@@ -16,15 +16,35 @@
 
 1.3 – At least five examples of the type of data your database will provide to the user.
 
-    Type of data provided:
-      1. Gun companies
-      2. Gun models
-      3. Gun stores
-      4. Specific gun model data, such as -
-          -Weight
-          -Caliber
-          -Number Manufactured
-      5. Gun owner name and address
+    1. SELECT *
+       FROM Company
+       WHERE Country = Germany
+
+       Provides user with all of the gun companies from Germany
+
+    2. SELECT Serial Number
+       FROM Gun
+       WHERE Owner ID = 102
+
+       Provides user with the serial numbers of the guns that a particular person has.
+
+    3. SELECT *
+       FROM Owner
+       WHERE Owner ID = 102
+
+       Provides user with the user that is associated with the owner id.
+
+    4. SELECT Model Name
+       FROM Model
+       WHERE Type = Rifle
+
+       Provides user with the model names of guns that are rifles.
+
+    5. SELECT Store ID
+       FROM Store
+       WHERE Name = Bobby's Big Guns
+
+       Provides user with the Store IDs of all the gun stores named Bobby's Big Guns. 
 
 1.4 – A preliminary idea of the schema of the database including table descriptions and potential columns.
 
