@@ -18,7 +18,7 @@
 
     1. SELECT *
        FROM Company
-       WHERE Country = Germany
+       WHERE Country = "Germany"
 
        Provides user with all of the gun companies from Germany
 
@@ -36,7 +36,7 @@
 
     4. SELECT Model_Name
        FROM Model
-       WHERE Type = Rifle
+       WHERE Type = "Rifle"
 
        Provides user with the model names of guns that are rifles.
 
