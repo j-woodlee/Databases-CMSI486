@@ -1,0 +1,80 @@
+George Sarantinos and Jake Woodlee 
+Detailed Database Design
+
+
+2.1 Project description, database engine used, potential users, maybe some other stuff
+
+
+This database is intended to provide information on guns and gun owners.  With this database, a user can find information as general as gun companies, to information as specific as the gun serial numbers.  The database also provides a way to link specific guns to their owners.  Therefore, this database can be used for more than a single purpose.
+
+
+Database Engine: Postgres
+
+
+Potential Users: Police, Gun Enthusiasts, Military
+
+
+2.2 Data Dictionary
+
+
+* Model - A table that holds a certain model of firearm and the corresponding information.  Example: Ruger 10/22 Takedown, M&P Sport 2, Walther PPQ, etc.
+   * Barrel Length 
+      * The length of the barrel as stated in the specifications of the firearm in inches. This is an integer.
+   * Company Name
+      * The name of the firearm manufacturer, in most cases this is also the designer, but not always. This is a string.
+   * Type
+      * Either rifle, shotgun, handgun, or other as defined by the ATF. This is a string.          https://www.atf.gov/firearms/firearms-guide-identification-firearms-within-purview-national-firearms-act
+   * Weight
+      * The unloaded weight of the firearm in pounds. This is an integer.
+   * Caliber
+      * The caliber of the model.  Caliber refers to the approximate internal bore diameter of the firearm or to the type of ammunition the gun is designed to shoot in inches. Example. .22lr, .223, .45acp, .22-250, etc. This is a string to accommodate obscure calibers that only are differentiated by the letters concatenated at the end.  Example: .22l, .22s are both different than .22lr.  
+   * Model Name
+      * The name of the model of firearm stored as a string.
+   * MSRP
+      * Manufacturer’s Suggested Retail Price as found in the firearm specifications in dollars. This is an integer.
+   * Number Manufactured
+      * The number manufactured of this particular model since it began to be manufactured. This is an integer.
+   * Muzzle Velocity
+      * A range of integers that represents the muzzle velocity in ft/s with the lowest speed factory manufactured cartridge to the highest speed factory manufactured cartridge.
+   * Action
+      * Either bolt action, pump action, lever action, or auto-loading, this is a string.
+* Company - Information on various firearm manufacturers.
+   * Company Name
+      * The name of the firearm manufacturer, this is a string. Examples include, CZ, FN, H&K, Walther, Smith & Wesson, Ruger, etc.
+   * Year Founded
+      * The year the company was founded, an integer.
+   * Country of Origin
+      * The country that the company was originally founded in. This is a string. Example: Belgium, United States of America, France, Germany, Czech Republic, etc.
+* Gun - A table that holds information on individual guns that are owned or in stock at at a store. 
+   * Serial Number
+      * The serial number of the gun given by the manufacturer. This will be stored as a string. 
+   * Store ID
+      * The ID of the store that the gun was sold at.  This will be stored as an integer. 
+   * Model Name 
+      * The model of the specific gun. This will be stored as a string.
+   * Year Made
+      * The year that the gun was built. This will be stored as an integer. 
+   * Owner ID
+      * The ID of the individual who purchased the gun. This will be stored an integer. 
+* Owner - A table that holds information on gun owners.
+   * Owner ID
+      * The unique ID of the owner. This will be stored an integer. 
+   * Address 
+      * The home address of the owner. This will be stored as a string. 
+   * Owner First Name
+      * The first name of the owner. This will be stored as a string.
+   * Owner Last Name
+      * The last name of the owner. This will be stored as a string.
+* Store - A table that holds information about gun stores.
+   * Store ID
+      * The unique ID of the store. This will be stored as an integer.
+   * Address
+      * The address of the gun store. This will be saved as a string.
+   * Store Name
+      * The name of the gun store. This will be saved as a string.
+
+
+2.3 Finalized Entity-Relationship Diagram
+
+
+(This is found on the finalized-ERD-diagram.png file)
